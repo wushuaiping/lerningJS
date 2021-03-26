@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript函数</title>
+    <style type="text/css">
+        #div1 {
+            background-color: aqua;
+            margin-bottom: 25px;
+        }
+
+        #div2 {
+            background-color: aqua;
+            margin-bottom: 25px;
+        }
+
+        #div3 {
+            background-color: aqua;
+            margin-bottom: 25px;
+        }
+    </style>
+</head>
+<body>
+<div id="div1">
+    <h2>加法计算器</h2>
+    <input id="number1" type="number" placeholder="请输入"> + <input id="number2" type="number" placeholder="请输入">=<span
+        id="result"></span>
+    <br/>
+    <button onclick="cal()">计算</button>
+</div>
+<div id="div2">
+    <h2>将华氏度转为摄氏度</h2>
+    <input id="number3" type="number" placeholder="请输入">℉ = <span id="result2"></span>℃
+    <br>
+    <button onclick="convert()">转换</button>
+</div>
+<div id="div3">
+    <h2>访问没有 () 的函数将返回函数定义</h2>
+    <p id="result3"></p>
+</div>
+</body>
+
+<script type="text/javascript">
+
+    function add(number1, number2) {
+        return number1 * 1 + number2 * 1;
+    }
+
+    function toCelsius(fahrenheit) {
+        return (5 / 9) * (fahrenheit - 32);
+    }
+
+    function cal() {
+        let number1 = document.getElementById('number1').value;
+        let number2 = document.getElementById('number2').value;
+        document.getElementById('result').innerHTML = add(number1, number2);
+    }
+
+    function convert(){
+        let number3 = document.getElementById('number3').value;
+        document.getElementById('result2').innerHTML=toCelsius(number3);
+    }
+
+    document.getElementById('result3').innerHTML = toCelsius;
+</script>
+</html>

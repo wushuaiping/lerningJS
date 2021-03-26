@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript对象</title>
+</head>
+<body>
+ <h2>车的属性</h2>
+ <p>车名: </p><p id="name"> </p><p id="type"></p>
+ <br>
+ <p>颜色: </p><p id="color"></p>
+ <br>
+ <p>售价: </p><p id="price"></p>
+ <br>
+ <p>原价: </p><p id="costOf"></p>
+ <br>
+ <p>税率: </p><p id="tax"></p>
+</body>
+<script>
+    let car = {
+        type: "911",
+        name: "porsche",
+        color: "white",
+        costOf: 800000,
+        tax: 0.2,
+        price: function (){
+            return (this.costOf * this.tax) + this.costOf;
+        }
+    }
+    document.getElementById('price').innerHTML = car.price();
+    document.getElementById('type').innerHTML = car.type;
+    document.getElementById('name').innerHTML = car.name;
+    document.getElementById('color').innerHTML = car.color;
+    document.getElementById('costOf').innerHTML = car["costOf"];
+    document.getElementById('tax').innerHTML = car.tax;
+
+
+</script>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript语句</title>
+</head>
+<body>
+<p id="demo"></p>
+<button onclick="viewText()">try it</button>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<script>
+    // 单行注释，var可以用let替代，var变量时全局的，不是代码块级别的，不如let安全。建议使用let
+    var x, y, z;
+    x = 1;
+    y = 2;
+    z = 1 + 2;
+    /*
+    多行注释:
+    1.xxxxx
+    2.xxxxx
+    3.xxxxx
+     */
+    document.getElementById('demo').innerHTML = "z的值是" + z;
+
+    function viewText() {
+        let name1 = "玛卡巴卡", name2 = "唔西迪西", name3;
+        document.getElementById('demo1').innerHTML = name1 + "：你好啊, " + name2;
+        document.getElementById('demo2').innerHTML = name2 + "：你好啊," + name1 + ", 这个是" + name3 + "吗?";
+        document.getElementById('demo3').innerHTML = 3 + 1 + "1a阿萨德";
+    }
+</script>
+</body>
+</html>

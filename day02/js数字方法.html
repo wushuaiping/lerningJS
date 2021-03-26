@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js数字方法</title>
+</head>
+<body>
+<p>toExponential() 返回字符串值，它包含已被四舍五入并使用指数计数法的数字。</p>
+<p id="demo1"></p>
+<p>toFixed() 返回字符串值，它包含指定位数小数的数字。</p>
+<p id="demo2"></p>
+<p>toPrecision() 返回字符串值，返回指定长度的数字。</p>
+<p id="demo3"></p>
+<p>最大数</p>
+<p id="demo4"></p>
+<p>最小数</p>
+<p id="demo5"></p>
+<script>
+    let x = 10.955;
+    // 保留两位小数四舍五入，并使用指数计数法
+    let y = x.toExponential(2);
+    let z = x.toFixed(2);
+    let a = x.toPrecision(4);
+    let maxvalue = Number.MAX_VALUE;
+    let minvalue = Number.MIN_VALUE;
+    document.getElementById('demo1').innerHTML = y;
+    document.getElementById('demo2').innerHTML = z;
+    document.getElementById('demo3').innerHTML = a;
+    document.getElementById('demo4').innerHTML = maxvalue;
+    document.getElementById('demo5').innerHTML = minvalue;
+</script>
+</body>
+</html>

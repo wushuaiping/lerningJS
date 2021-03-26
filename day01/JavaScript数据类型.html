@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript数据类型</title>
+</head>
+<body>
+<script>
+    let carArr = ["Volvo", "Porsche", "BMW"];
+    let person = {age: 26, name: "吴帅苹", birthday: "1995-02-11"};
+    let number = 1.2;
+    let string = "哈哈";
+    let name = person.name;
+    let birthday = person.birthday;
+    let age = person.age;
+    age = undefined;
+    let b = null == undefined;
+    let b1 = null === undefined;
+    console.log("carArr的类型：" + typeof carArr);
+    console.log("person的类型：" + typeof person);
+    console.log("number的类型：" + typeof number);
+    console.log("string的类型：" + typeof string);
+    console.log("birthday：" + birthday);
+    console.log("age：" + age);
+    console.log("typeof undefined：" + typeof undefined);
+    console.log("typeof null：" + typeof null);
+    console.log("null === undefined：" + b1);
+    console.log("null == undefined：" + b);
+</script>
+</body>
+</html>

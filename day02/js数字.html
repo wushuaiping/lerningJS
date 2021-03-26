@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS数字</title>
+</head>
+<body>
+<h1>JavaScript 数字</h1>
+
+<p>浮点的算数并不总是 100% 精准：</p>
+
+<p id="demo"></p>
+
+<p>使用乘法保证浮点算数的精确：</p>
+<p id="demo1"></p>
+
+<p>是否是数：</p>
+<p id="demo2"></p>
+
+<p>判断是否不是数：</p>
+<p id="demo3"></p>
+
+<p>NaN的类型：</p>
+<p id="demo4"></p>
+
+<p>计算时数的最大范围：</p>
+<p id="demo5"></p>
+
+<p>通过number.toString(x)转进制：</p>
+<p id="demo6"></p>
+
+
+<script>
+    let x = 0.2 + 0.1;
+    let y = (0.2*10 + 0.1*10) / 10;
+    let z = 10 / "Apple";
+    let a = isNaN(z);
+    let b = typeof NaN;
+    let txt;
+    function infinity(c){
+        while (c !== Infinity){
+            c *= c;
+            txt = txt + c + "<br>";
+        }
+        return c;
+    }
+    infinity(2);
+    let d = 10086;
+    let e = d.toString(16);
+    document.getElementById("demo").innerHTML = "0.2 + 0.1 = " + x;
+    document.getElementById("demo1").innerHTML = "(0.2*10 + 0.1*10) / 10 = " + y;
+    document.getElementById("demo2").innerHTML = "10 / \"Apple\" = " + z;
+    document.getElementById("demo3").innerHTML = "isNaN(10 / \"Apple\") = " + a;
+    document.getElementById("demo4").innerHTML = "typeof NaN = " + b;
+    document.getElementById("demo5").innerHTML = infinity + "<br>" + txt;
+    document.getElementById("demo6").innerHTML = "10086.toString(16) = " + e;
+</script>
+
+</body>
+</html>

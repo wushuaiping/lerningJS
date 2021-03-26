@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS数组方法</title>
+</head>
+<body>
+对数组进行排序：<p id="demo1"></p>
+<button onclick="sortByNumber()">以字母正序排序</button>
+<button onclick="reverseByNumber()">以字母倒序排序</button>
+<button onclick="sortByString()">以字符串顺序排序</button>
+<button onclick="random()">随机排序</button>
+<button onclick="getMaxNumber()">获取最大值</button>
+<button onclick="getMinNumber()">获取最小值</button>
+<script>
+    let fruits = [11, 2, 32, 4, 1];
+    /**
+     * 数组排序是根据Unicode码来排序的，并不是想象中数字从小到大的排序，
+     * 对于字符串来说，这样排序无可厚非，但是对于数字来说就不行，所以需要自定排序。
+     */
+    document.getElementById('demo1').innerHTML = fruits.toString();
+
+    function sortByNumber() {
+        fruits.sort(function (a, b) {
+            return a - b;
+        });
+        document.getElementById('demo1').innerHTML = fruits.toString();
+    }
+
+    function reverseByNumber() {
+        fruits.sort(function (a, b) {
+            return b - a;
+        });
+        document.getElementById('demo1').innerHTML = fruits.toString();
+    }
+
+    function sortByString() {
+        fruits.sort();
+        document.getElementById('demo1').innerHTML = fruits.toString();
+    }
+
+    function random() {
+        fruits.sort(function (a, b) {
+            return 0.5 - Math.random();
+        });
+        document.getElementById('demo1').innerHTML = fruits.toString();
+    }
+
+    function getMaxNumber() {
+        let number = maxNumber(fruits);
+        document.getElementById('demo1').innerHTML = number;
+    }
+
+    function getMinNumber() {
+        let number = minNumber(fruits);
+        document.getElementById('demo1').innerHTML = number;
+    }
+
+    function maxNumber(arr) {
+        let len = arr.length;
+        // 定义为最小的值
+        let max = -Infinity;
+        while (len--) {
+            if (arr[len] > max) {
+                max = arr[len];
+            }
+        }
+        return max;
+    }
+
+    function minNumber(arr) {
+        let len = arr.length;
+        let min = Infinity;
+        while (len--) {
+            if (min > arr[len]) {
+                min = arr[len];
+            }
+        }
+        return min;
+    }
+
+
+</script>
+</body>
+</html>

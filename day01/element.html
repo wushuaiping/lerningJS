@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学习getElementById函数</title>
+    <style type="text/css">
+        #div1{
+            background-color: aqua;
+            margin-bottom: 25px;
+        }
+        #div2{
+            background-color: beige;
+            margin-bottom: 25px;
+        }
+    </style>
+</head>
+<body>
+<div id="div1">
+    <p id="hello" style="display: block">你好啊</p>
+    <button onclick="document.getElementById('hello').innerHTML='HelloWorld'">点击更改文字</button>
+    <button onclick="document.getElementById('hello').style.fontSize='25px'">点击更改文字大小</button>
+    <button onclick="document.getElementById('hello').style.display='none'">点击隐藏文字</button>
+    <button onclick="document.getElementById('hello').style.display='block'">点击显示文字</button>
+</div>
+<div id="div2">
+    <button onclick="document.getElementById('image').src='eg_bulbon.gif'">
+        开灯
+    </button>
+    <img id="image" border="0" src="eg_bulboff.gif">
+    <button onclick="document.getElementById('image').src='eg_bulboff.gif'">
+        关灯
+    </button>
+</div>
+</body>
+</html>
