@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS严格模式</title>
+</head>
+<body>
+<script>
+    debugger;
+    // 这里不会报错
+    x=3.14;
+    // 严格模式拥有作用域
+    test();
+    function test(){
+        "use strict";
+        // 这里会报错
+        y = 3.14;
+    }
+</script>
+</body>
+</html>

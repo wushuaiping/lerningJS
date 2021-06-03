@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS表单</title>
+</head>
+<body>
+输入100以上数字：<input id="id1" type="number" min="100" required>
+<button onclick="validate()">OK</button>
+<p id="demo"></p>
+<script>
+    function validate() {
+        let txt = "输入正确";
+        if (document.getElementById('id1').validity.rangeUnderflow) {
+            txt = "输入的值太小";
+         }
+        document.getElementById('demo').innerHTML = txt;
+
+    }
+</script>
+</body>
+</html>
